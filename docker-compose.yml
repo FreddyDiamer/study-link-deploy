@@ -23,7 +23,7 @@ services:
     restart: unless-stopped
 
   app:
-    image: freddydiamer/study-link-api:1.0
+    image: ghcr.io/freddydiamer/study-link-api:${API_IMAGE_TAG:?API_IMAGE_TAG is required}
     container_name: study-link-api
     volumes:
       - app_logs:/app/logs
@@ -46,7 +46,7 @@ services:
     restart: unless-stopped
 
   caddy:
-    image: freddydiamer/study-link-webapp:1.0
+    image: ghcr.io/freddydiamer/study-link-webapp:${WEBAPP_IMAGE_TAG:?WEBAPP_IMAGE_TAG is required}
     container_name: study-link-caddy
     ports:
       - '80:80'
