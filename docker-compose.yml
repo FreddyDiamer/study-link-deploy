@@ -33,6 +33,7 @@ services:
       - JWT_EXPIRES_IN=${JWT_EXPIRES_IN:-7d}
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN:?TELEGRAM_BOT_TOKEN is required}
       - FRONTEND_BASE_URL=${FRONTEND_BASE_URL:?FRONTEND_BASE_URL is required}
+      - ADMIN_TELEGRAM_IDS=${ADMIN_TELEGRAM_IDS:-}
       - NODE_ENV=${NODE_ENV:-production}
     depends_on:
       postgres:
